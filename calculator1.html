@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Using JavaScript</title>
+    <link rel="stylesheet" href="calci.css">
+</head>
+<body>
+    <h1> Calculator</h1>
+    <script>
+function insert(num) 
+{
+document.form1.textview.value = document.form1.textview.value + num;
+}
+function equal()
+{
+var exp = document.form1.textview.value;
+if(exp)
+{
+document.form1.textview.value = eval(exp)
+}
+}
+ </script>
+ <div class= "formstyle">
+ <form name = "form1">
+    <input class= "textview" name = "textview"><br><br>
+	<input class = "btn" type = "button" value = "C" onclick = "form1.textview.value = ' ' " > 
+	<input class = "btn"  type = "button" value = "0" onclick = "insert(0)" >
+	<input  class = "btn" type = "button" value = "/" onclick = "insert('/')" > 
+	<input class = "btn" type = "button" value = "x" onclick = "insert('*')" > <br><br>
+	<input class = "btn" type = "button" value = "7" onclick = "insert(7)" > 
+	<input class = "btn" type = "button" value = "8" onclick = "insert(8)" > 
+	<input class = "btn" type = "button" value = "9" onclick = "insert(9)" > 
+	<input class = "btn" type = "button" value = "-" onclick = "insert('-')" ><br><br>
+	<input class = "btn" type = "button" value = "4" onclick = "insert(4)" > 
+    <input class = "btn" type = "button" value = "5" onclick = "insert(5)" > 
+	<input class = "btn" type = "button" value = "6" onclick = "insert(6)" > 
+	<input class = "btn" type = "button" value = "+" onclick = "insert('+')" ><br><br>
+	<input class = "btn" type = "button" value = "1" onclick = "insert(1)" >
+    <input class = "btn" type = "button" value = "2" onclick = "insert(2)" >
+    <input class = "btn" type = "button" value = "3" onclick = "insert(3)" >
+    <input class = "btn" type = "button" value = "=" onclick = "equal()"> 
+</form>
+ </div>
+</body>
+</html>
